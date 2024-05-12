@@ -2572,7 +2572,7 @@ input, select, textarea {
 		-webkit-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
-		postiion: relative;
+		postition: relative;
 		margin: -2.5em 0 0 -2.5em;
 	}
 
@@ -2634,6 +2634,7 @@ input, select, textarea {
 					left: 0;
 					width: 100%;
 					height: 100%;
+					/*this added an X to the tiles before hovering over them*/
 					/*background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cstyle%3Eline %7B stroke-width: 0.25px%3B stroke: %23ffffff%3B %7D%3C/style%3E%3Cline x1='0' y1='0' x2='100' y2='100' /%3E%3Cline x1='100' y1='0' x2='0' y2='100' /%3E%3C/svg%3E");*/
 					background-position: center;
 					background-repeat: no-repeat;
@@ -2743,6 +2744,7 @@ input, select, textarea {
 				body:not(.is-touch) .tiles article:hover > .image:after {
 					background-color: #333333;
 					opacity: 0.35;
+					/*this is a difference from the original. I am not sure it does anything*/
 				}
 
 			body:not(.is-touch) .tiles article:hover .content {
@@ -3311,6 +3313,50 @@ input, select, textarea {
 
 		}
 
+		.containerB {
+			width: 100%;
+			height: 200px;
+			margin-bottom: 25px;
+			text-align: center;
+			background-color: white;
+		}
+		.containerA {
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			-moz-flex-wrap: wrap;
+			-webkit-flex-wrap: wrap;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+			postition: relative;
+			margin: -2.5em 0 0 -2.5em;
+		}
+		.boxB {
+			width: 100%;
+			height: 100px;
+			padding: 10px;
+			display: inline-block;
+			background-color: rgb(214, 121, 7);
+
+		}		
+		.boxes {
+			width: 30%;
+			height: 400px;
+			border: 1px solid;
+			padding: 10px;
+			margin: 10px;
+			display: inline-block;
+			box-shadow: 5px 10px 8px #888888;
+			background-color: rgb(238, 219, 178);
+
+		}
+
+		.section-3 {
+			margin-bottom: 2px;
+			padding-bottom: 100px;
+		}
+
 /* Wrapper */
 
 	#wrapper > * > .inner {
@@ -3327,3 +3373,4 @@ input, select, textarea {
 			}
 
 		}
+
