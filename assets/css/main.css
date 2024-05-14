@@ -3320,6 +3320,8 @@ input, select, textarea {
 			text-align: center;
 			background-color: white;
 		}
+
+ /*ContainerA forr comment tiles */ 
 		.containerA {
 			display: -moz-flex;
 			display: -webkit-flex;
@@ -3332,6 +3334,157 @@ input, select, textarea {
 			postition: relative;
 			margin: -2.5em 0 0 -2.5em;
 		}
+
+		.containerA {
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			-moz-flex-wrap: wrap;
+			-webkit-flex-wrap: wrap;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+			postition: relative;
+			margin: -2.5em 0 0 -2.5em;
+		}
+
+		.containerA article {
+			-moz-transition: -moz-transform 0.5s ease, opacity 0.5s ease;
+			-webkit-transition: -webkit-transform 0.5s ease, opacity 0.5s ease;
+			-ms-transition: -ms-transform 0.5s ease, opacity 0.5s ease;
+			transition: transform 0.5s ease, opacity 0.5s ease;
+			position: relative;
+			width: calc(33.33333% - 2.5em);
+			margin: 2.5em 0 0 2.5em;
+		}
+
+			.containerA article > .image {
+				-moz-transition: -moz-transform 0.5s ease;
+				-webkit-transition: -webkit-transform 0.5s ease;
+				-ms-transition: -ms-transform 0.5s ease;
+				transition: transform 0.5s ease;
+				position: relative;
+				display: block;
+				width: 100%;
+				border-radius: 4px;
+				overflow: hidden;
+			}
+
+				.containerA article > .image img {
+					display: block;
+					width: 100%;
+				}
+
+				.containerA article > .image:before {
+					pointer-events: none;
+					-moz-transition: background-color 0.5s ease, opacity 0.5s ease;
+					-webkit-transition: background-color 0.5s ease, opacity 0.5s ease;
+					-ms-transition: background-color 0.5s ease, opacity 0.5s ease;
+					transition: background-color 0.5s ease, opacity 0.5s ease;
+					content: '';
+					display: block;
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					opacity: 1.0;
+					z-index: 1;
+					opacity: 0.8;
+				}
+
+				.containerA article > .image:after {
+					pointer-events: none;
+					-moz-transition: opacity 0.5s ease;
+					-webkit-transition: opacity 0.5s ease;
+					-ms-transition: opacity 0.5s ease;
+					transition: opacity 0.5s ease;
+					content: '';
+					display: block;
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					/*this added an X to the tiles before hovering over them*/
+					/*background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cstyle%3Eline %7B stroke-width: 0.25px%3B stroke: %23ffffff%3B %7D%3C/style%3E%3Cline x1='0' y1='0' x2='100' y2='100' /%3E%3Cline x1='100' y1='0' x2='0' y2='100' /%3E%3C/svg%3E");*/
+					background-position: center;
+					background-repeat: no-repeat;
+					background-size: 100% 100%;
+					opacity: 0.25;
+					z-index: 2;
+				}
+
+			.containerA article > a {
+				display: -moz-flex;
+				display: -webkit-flex;
+				display: -ms-flex;
+				display: flex;
+				-moz-flex-direction: column;
+				-webkit-flex-direction: column;
+				-ms-flex-direction: column;
+				flex-direction: column;
+				-moz-align-items: center;
+				-webkit-align-items: center;
+				-ms-align-items: center;
+				align-items: center;
+				-moz-justify-content: center;
+				-webkit-justify-content: center;
+				-ms-justify-content: center;
+				justify-content: center;
+				-moz-transition: background-color 0.5s ease, -moz-transform 0.5s ease;
+				-webkit-transition: background-color 0.5s ease, -webkit-transform 0.5s ease;
+				-ms-transition: background-color 0.5s ease, -ms-transform 0.5s ease;
+				transition: background-color 0.5s ease, transform 0.5s ease;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				padding: 1em;
+				border-radius: 4px;
+				border-bottom: 0;
+				color: #ffffff;
+				text-align: center;
+				text-decoration: none;
+				z-index: 3;
+			}
+
+				.containerA article > a > :last-child {
+					margin: 0;
+				}
+
+				.containerA article > a:hover {
+					color: #ffffff !important;
+				}
+
+				.containerA article > a h2 {
+					margin: 0;
+				}
+
+				.containerA article > a .content {
+					-moz-transition: max-height 0.5s ease, opacity 0.5s ease;
+					-webkit-transition: max-height 0.5s ease, opacity 0.5s ease;
+					-ms-transition: max-height 0.5s ease, opacity 0.5s ease;
+					transition: max-height 0.5s ease, opacity 0.5s ease;
+					width: 100%;
+					max-height: 0;
+					line-height: 1.5;
+					margin-top: 0.35em;
+					opacity: 0;
+				}
+
+					.containerA article > a .content > :last-child {
+						margin-bottom: 0;
+					}
+
+			.tiles article.styleA > .image:before {
+				background-color: #7bd0c1;
+			}
+
+
+
+
 		.boxB {
 			width: 100%;
 			height: 100px;
@@ -3339,9 +3492,72 @@ input, select, textarea {
 			display: inline-block;
 			background-color: rgb(214, 121, 7);
 
-		}		
-		.boxes {
-			width: 30%;
+		}	
+
+		/* boxes */
+
+.boxes {
+	border-radius: 4px;
+	border: 0;
+	display: inline-block;
+	position: relative;
+}
+
+	.boxes img {
+		border-radius: 4px;
+		display: block;
+	}
+
+	.boxes.left, .boxes.right {
+		max-width: 40%;
+	}
+
+		.boxes.left img, .boxes.right img {
+			width: 100%;
+		}
+
+	.boxes.left {
+		float: left;
+		padding: 0 1.5em 1em 0;
+		top: 0.25em;
+	}
+
+	.boxes.right {
+		float: right;
+		padding: 0 0 1em 1.5em;
+		top: 0.25em;
+	}
+
+	.boxes.fit {
+		display: block;
+		margin: 0 0 2em 0;
+		width: 100%;
+	}
+
+		.boxes.fit img {
+			width: 100%;
+		}
+
+	.boxes.main {
+		display: block;
+		margin: 0 0 3em 0;
+		width: 100%;
+	}
+
+		.boxes.main img {
+			width: 100%;
+		}
+
+		@media screen and (max-width: 736px) {
+
+			.boxes.main {
+				margin: 0 0 2em 0;
+			}
+
+		}
+	
+		.boxA {
+			width: 100%;
 			height: 400px;
 			border: 1px solid;
 			padding: 10px;
@@ -3349,7 +3565,7 @@ input, select, textarea {
 			display: inline-block;
 			box-shadow: 5px 10px 8px #888888;
 			background-color: rgb(238, 219, 178);
-
+		
 		}
 
 		.section-3 {
