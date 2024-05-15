@@ -187,6 +187,7 @@ input, select, textarea {
 
 		}
 
+		
 		@media screen and (max-width: 360px) {
 
 			h1 {
@@ -3313,15 +3314,66 @@ input, select, textarea {
 
 		}
 
+		.map {
+			right:25%;
+			top:0px;
+			width:35%;
+			height:auto;
+			}
+
 		.containerB {
 			width: 100%;
-			height: 200px;
-			margin-bottom: 25px;
+			height: 10vh;
+			margin-bottom: 10px;
 			text-align: center;
 			background-color: white;
+		    display: flex;
+            justify-content: center;
+            align-items: center;
 		}
 
- /*ContainerA forr comment tiles */ 
+		.boxB {
+			width: 100%;
+			height: 100%;
+			padding: 10px;
+			display: inline-block;
+			background-color: rgb(214, 121, 7);
+		    display: flex;
+            justify-content: center;
+            align-items: center;
+
+		}	
+		
+		h11 {
+			font-size: 3vw;
+			font-weight: 700;
+			line-height: 1.3;
+			letter-spacing: 0em;
+		}
+	
+			h1 a {
+				color: inherit;
+			}
+	
+			@media screen and (max-width: 736px) {
+	
+				h1 {
+					font-size: 2em;
+					margin: 0 0 1em 0;
+				}
+	
+			}
+	
+			
+			@media screen and (max-width: 360px) {
+	
+				h1 {
+					font-size: 1.75em;
+				}
+	
+			}
+	
+ /*ContainerA for comment tiles */ 
 		.containerA {
 			display: -moz-flex;
 			display: -webkit-flex;
@@ -3481,18 +3533,6 @@ input, select, textarea {
 			.tiles article.styleA > .image:before {
 				background-color: #7bd0c1;
 			}
-
-
-
-
-		.boxB {
-			width: 100%;
-			height: 100px;
-			padding: 10px;
-			display: inline-block;
-			background-color: rgb(214, 121, 7);
-
-		}	
 
 		/* boxes */
 
